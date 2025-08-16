@@ -1,0 +1,100 @@
+[
+  {
+    "model": "blog.post",
+    "pk": 5,
+    "fields": {
+      "title": "Первый пост",
+      "slug": "pervyy-post",
+      "body": "Это содержимое первого поста. Здесь может быть любой текст, например, приветствие или описание блога.",
+      "publish": "2025-08-10T10:00:00Z",
+      "created": "2025-08-01T08:00:00Z",
+      "updated": "2025-08-05T09:00:00Z",
+      "status": "PB",
+      "author": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 6,
+    "fields": {
+      "title": "Черновик поста",
+      "slug": "chernovik-posta",
+      "body": "Это черновик. Тут может быть неоконченная мысль или набросок идеи.",
+      "publish": "2025-08-15T12:00:00Z",
+      "created": "2025-08-02T11:00:00Z",
+      "updated": "2025-08-06T10:00:00Z",
+      "status": "DF",
+      "author": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 7,
+    "fields": {
+      "title": "Как создать блог на Django",
+      "slug": "kak-sozdat-blog-na-django",
+      "body": "Пошаговая инструкция по созданию блога с использованием Django и Python.",
+      "publish": "2025-08-12T14:00:00Z",
+      "created": "2025-08-03T09:30:00Z",
+      "updated": "2025-08-07T11:30:00Z",
+      "status": "PB",
+      "author": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 8,
+    "fields": {
+      "title": "Новости мира IT",
+      "slug": "novosti-mira-it",
+      "body": "Последние новости из мира информационных технологий и программирования.",
+      "publish": "2025-08-14T16:00:00Z",
+      "created": "2025-08-04T10:15:00Z",
+      "updated": "2025-08-08T12:15:00Z",
+      "status": "PB",
+      "author": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 9,
+    "fields": {
+      "title": "Обзор новых технологий",
+      "slug": "obzor-novykh-tekhnologiy",
+      "body": "В этом посте рассмотрены последние тренды в области веб-разработки и искусственного интеллекта.",
+      "publish": "2025-08-16T08:00:00Z",
+      "created": "2025-08-05T13:45:00Z",
+      "updated": "2025-08-09T15:45:00Z",
+      "status": "PB",
+      "author": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 10,
+    "fields": {
+      "title": "Советы по продуктивности",
+      "slug": "sovety-po-produktivnosti",
+      "body": "Полезные советы, как оставаться продуктивным и управлять своим временем эффективно.",
+      "publish": "2025-08-17T18:00:00Z",
+      "created": "2025-08-06T16:30:00Z",
+      "updated": "2025-08-10T17:30:00Z",
+      "status": "DF",
+      "author": 1
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 11,
+    "fields": {
+      "title": "Заметки о Python",
+      "slug": "zametki-o-python",
+      "body": "Краткие заметки и примеры кода на языке Python для начинающих разработчиков.",
+      "publish": "2025-08-18T20:00:00Z",
+      "created": "2025-08-07T18:00:00Z",
+      "updated": "2025-08-11T19:00:00Z",
+      "status": "PB",
+      "author": 1
+    }
+  }
+]
