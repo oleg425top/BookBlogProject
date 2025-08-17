@@ -2,7 +2,7 @@
  {% block title %}{{ title }}{% endblock %}
  {% block content %}
   <h1>My Blog</h1>
-  {% for post in objects_list %}
+  {% for post in object_list %}
     <h2>
         <a href="{{ post.get_absolute_url }}">
             {{ post.title }}
@@ -13,5 +13,5 @@
     </p>
     {{ post.body|truncatewords:30|linebreaks }}
   {% endfor %}
- {% include "pagination.html" with page=posts %}
+ {% include "pagination.html" with page=page_obj %}
  {% endblock %}
