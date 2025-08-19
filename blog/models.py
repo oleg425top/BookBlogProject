@@ -47,3 +47,25 @@ class Post(models.Model):
                             self.publish.day,
                             self.slug
                         ])
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments', verbose_name='к посту')
+    name = models.CharField(max_length=80, verbose_name='Заголовок коммента')
+    email = models.EmailField(verbose_name='почта')
+    body = models.TextField(verbose_name='содержание')
+    created = models.DateTimeField(auto_now_add=True, verbose_name='создан')
+    updated = models.DateTimeField(auto_now=True, verbose_name='обновлен')
+    active = models.BooleanField(default=True, verbose_name='активность')
+
+    class Meta:
+        ordering = ['created']
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
+        indexes = [
+            models.Index(fields=['created']),
+        ]
+
+
+    def __str__(self):
+        return f'Comment by {self.name} on {self.post}'
+
