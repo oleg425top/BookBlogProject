@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 
 from django.db import models
+from taggit.managers import TaggableManager
 
 
 class PublishManager(models.Manager):
@@ -27,6 +28,7 @@ class Post(models.Model):
 
     objects = models.Manager()
     published = PublishManager()
+    tags = TaggableManager()
 
     class Meta:
         ordering = ['-publish']
