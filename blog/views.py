@@ -1,3 +1,4 @@
+from django.db.models import Count
 from django.views.decorators.http import require_POST
 from django.views.generic import ListView
 
@@ -58,12 +59,16 @@ def post_detail(request, year, month, day, post):
                              publish__day=day)
     comments = post.comments.filter(active=True)
     form = CommentForm()
+    post_tags_ids = post.tags.values_list('id', flat=True)
+    similar_posts = Post.published.filter(tags__in=post_tags_ids).exclude(id=post.id)
+    similar_posts = similar_posts.annotate(same_tags=Count('tags')).order_by('-same_tags','-publish')[:4]
     context = {
         'post':post,
         'comments':comments,
         'title': 'Детали поста',
         'object': post,
         'form':form,
+        'similar_posts':similar_posts,
     }
     return render(request, 'blog/post/post_detail.html', context=context)
 
