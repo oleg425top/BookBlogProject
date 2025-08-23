@@ -1,40 +1,73 @@
 {% extends "blog/base.html" %}
- {% block title %}
-{{ object.title }}
-{% endblock %}
- {% block content %}
-  <h1>{{ object.title }}</h1>
-  <p class="date">
-    Published {{ object.publish }} by {{ object.author }}
-  </p>
-  {{ object.body|linebreaks }}
-    <p>
-    <a href="{% url 'blog:post_share' post.id %}">
-      Share this post
-    </a>
-  </p>
 
-<h2>Похожие посты</h2>
-{% for post in similar_posts %}
-    <p>
-        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-    </p>
-{% empty %}
-    Похожих постов пока нет.
-{% endfor %}
-{% with comments.count as total_comments %}
-    <h2>{{ total_comments }} comment{{total_comments|pluralize }}</h2>
-{% endwith %}
-  {% for comment in comments %}
-    <div class="comment">
-      <p class="info">
-        Comment {{ forloop.counter }} by {{ comment.name }}
-        {{ comment.created }}
+{% block title %}
+  {{ object.title }}
+{% endblock %}
+
+{% block content %}
+  <!-- Пост -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h1 class="card-title">{{ object.title }}</h1>
+      <p class="text-muted small">
+        Опубликовано {{ object.publish|date:"d.m.Y H:i" }} автором {{ object.author }}
       </p>
-      {{ comment.body|linebreaks }}
+      <div class="card-text">
+        {{ object.body|linebreaks }}
+      </div>
+      <a href="{% url 'blog:post_share' post.id %}" class="btn btn-sm btn-outline-primary mt-3">
+        Поделиться постом
+      </a>
     </div>
-  {% empty %}
-    <p>There are no comments.</p>
-  {% endfor %}
- {% include "blog/post/includes/comment_form.html" %}
- {% endblock %}
+  </div>
+
+  <!-- Похожие посты -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h2 class="h5">Похожие посты</h2>
+      {% for post in similar_posts %}
+        <p class="mb-1">
+          <a href="{{ post.get_absolute_url }}" class="text-decoration-none">
+            {{ post.title }}
+          </a>
+        </p>
+      {% empty %}
+        <p class="text-muted">Похожих постов пока нет.</p>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Комментарии -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      {% with comments.count as total_comments %}
+        <h2 class="h5 mb-3">{{ total_comments }} комментар{{ total_comments|pluralize:"ий,ия,иев" }}</h2>
+      {% endwith %}
+
+      {% for comment in comments %}
+        <div class="mb-3 border-bottom pb-2">
+          <p class="mb-1 small text-muted">
+            Комментарий {{ forloop.counter }} от <strong>{{ comment.name }}</strong>,
+            {{ comment.created|date:"d.m.Y H:i" }}
+          </p>
+          <p class="mb-0">{{ comment.body|linebreaks }}</p>
+        </div>
+      {% empty %}
+        <p class="text-muted">Комментариев пока нет.</p>
+      {% endfor %}
+      <p class="mb-2">
+              {% for tag in post.tags.all %}
+                <a href="{% url 'blog:posts_list_by_tag' tag.slug %}" class="badge bg-secondary text-decoration-none">
+                  {{ tag.name }}
+                </a>
+              {% empty %}
+                <span class="text-muted">Без тегов</span>
+              {% endfor %}
+            </p>
+    </div>
+  </div>
+
+  <!-- Форма комментария -->
+  {% include "blog/post/includes/comment_form.html" %}
+
+{% endblock %}

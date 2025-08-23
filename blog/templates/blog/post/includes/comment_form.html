@@ -1,6 +1,27 @@
- <h2>Add a new comment</h2>
- <form action="{% url 'blog:post_comment' post.id %}" method="post">
-  {{ form.as_p }}
+<h2 class="mt-4 mb-3">Добавить комментарий</h2>
+<form action="{% url 'blog:post_comment' post.id %}" method="post" class="card p-3 shadow-sm">
   {% csrf_token %}
-  <p><input type="submit" value="Add comment"></p>
- </form>
+
+  <!-- Выводим ошибки, если есть -->
+  {% if form.errors %}
+    <div class="alert alert-danger">
+      Пожалуйста, исправьте ошибки в форме.
+    </div>
+  {% endif %}
+
+  <!-- Рендерим поля формы -->
+  {% for field in form %}
+    <div class="mb-3">
+      <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+      {{ field }}
+      {% if field.errors %}
+        <div class="text-danger small">
+          {{ field.errors }}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+
+  <!-- Кнопка отправки -->
+  <button type="submit" class="btn btn-primary">Добавить комментарий</button>
+</form>

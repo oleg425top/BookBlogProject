@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">Последние посты</h5>
+    </div>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        {% for post in latest_posts %}
+        <li class="list-group-item">
+          <a href="{{ post.get_absolute_url }}" class="text-decoration-none fw-bold text-dark">
+            {{ post.title }}
+          </a>
+          <div class="text-muted small mt-1">
+            Опубликовано: {{ post.publish|date:"d.m.Y H:i" }}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,36 @@
-<div class="pagination">
- <span class="step-links">
-      {% if page.has_previous %}
- <a href="?page={{ page.previous_page_number }}">Previous</a>
-      {% endif %}
- <span class="current">
-        Page {{ page.number }} of {{ page.paginator.num_pages }}.
- </span>
-      {% if page.has_next %}
- <a href="?page={{ page.next_page_number }}">Next</a>
-      {% endif %}
- </span>
- </div>
+<nav aria-label="Навигация по страницам">
+  <ul class="pagination justify-content-center">
+
+    <!-- Кнопка "Назад" -->
+    {% if page.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ page.previous_page_number }}">Назад</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">Назад</span>
+      </li>
+    {% endif %}
+
+    <!-- Текущая страница -->
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">
+        {{ page.number }}
+        <span class="visually-hidden">(текущая)</span>
+      </span>
+    </li>
+
+    <!-- Кнопка "Вперёд" -->
+    {% if page.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ page.next_page_number }}">Вперёд</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">Вперёд</span>
+      </li>
+    {% endif %}
+
+  </ul>
+</nav>
+

@@ -1,3 +1,5 @@
+from lib2to3.fixes.fix_input import context
+
 from django.db.models import Count
 from django.views.decorators.http import require_POST
 from django.views.generic import ListView
@@ -9,6 +11,15 @@ from taggit.models import Tag
 from blog.forms import EmailPostForm, CommentForm
 from blog.models import Post
 from blog.services import send_email
+
+def index_view(request):
+    posts = Post.published.all()[:3]
+    context = {
+        'title':'Home: главная',
+        'posts':posts,
+
+    }
+    return render(request, 'blog/post/index.html', context=context)
 
 
 def posts_list(request, tag_slug=None):
