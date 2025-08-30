@@ -1,16 +1,19 @@
-from lib2to3.fixes.fix_input import context
-
 from django.db.models import Count
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 from django.views.decorators.http import require_POST
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView
+from django.utils.text import slugify
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from taggit.models import Tag
 
-from blog.forms import EmailPostForm, CommentForm
+from blog.forms import EmailPostForm, CommentForm, PostForm
 from blog.models import Post
 from blog.services import send_email
+from blog.utils import slug_generator
+
 
 def index_view(request):
     posts = Post.published.all()[:3]
@@ -64,6 +67,21 @@ class PostListView(ListView):
 #                   publish__day=day,
 #                   slug=post_object,
 #                   context=context)
+
+def post_create(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            if not post.slug:
+                post.slug = slug_generator(post.title)
+            post.save()
+            return HttpResponseRedirect(reverse('blog:posts_list'))
+    else:
+        form = PostForm()
+        return render(request, 'blog/post/post_create.html', {'title':'Создание поста', 'form': form})
+
 
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post, status=Post.Status.PUBLISHED, slug=post, publish__year=year, publish__month=month,
@@ -125,3 +143,13 @@ def post_comment(request, post_id):
     return render(request, 'blog/post/comment.html', context=context)
 
 
+def post_delete(request, post_id):
+    post = get_object_or_404(Post, id=post_id, author=request.user)
+    if request.method == 'POST':
+        post.delete()
+        return redirect('blog:posts_list')
+    context = {
+            'post': post,
+            'title': 'Удалить пост',
+        }
+    return render(request, 'blog/post/post_delete.html', context=context)
