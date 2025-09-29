@@ -59,8 +59,27 @@
             Это мой блог на Django.
             Я написал уже {% total_posts %} постов.
           </p>
-          <h3>Latest posts</h3>
+          <h3>Последние посты</h3>
             {% show_latest_posts 3 %}
+          <br>
+          <h3>Посты с большим числом комментов</h3>
+          <div class="container mt-4">
+            <div class="card">
+              <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Больше всего комментов к посту:</h5>
+              </div>
+              {% get_most_commented_posts as most_commented_posts %}
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  {% for post in most_commented_posts %}
+                  <li class="list-group-item">
+                    <a href="{{ post.get_absolute_url }}" class="text-decoration-none fw-bold text-dark">{{ post.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </aside>
 
