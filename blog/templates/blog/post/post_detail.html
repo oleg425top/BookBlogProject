@@ -1,5 +1,5 @@
 {% extends "blog/base.html" %}
-
+{% load blog_tags %}
 {% block title %}
   {{ object.title }}
 {% endblock %}
@@ -13,7 +13,7 @@
         Опубликовано {{ object.publish|date:"d.m.Y H:i" }} автором {{ object.author }}
       </p>
       <div class="card-text">
-        {{ object.body|linebreaks }}
+        {{ object.body|markdown }}
       </div>
       <a href="{% url 'blog:post_share' post.id %}" class="btn btn-sm btn-outline-primary mt-3">
         Поделиться постом

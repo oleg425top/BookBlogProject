@@ -1,4 +1,5 @@
 {% extends "blog/base.html" %}
+{% load blog_tags %}
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
@@ -33,12 +34,12 @@
 
             <!-- Дата и автор -->
             <p class="text-muted small">
-              Опубликовано {{ post.publish|date:"d.m.Y H:i" }} автором {{ post.author }}
+              Опубликовано {{post.publish|date:"d.m.Y H:i"}} автором {{post.author}}
             </p>
 
             <!-- Текст поста (укороченный) -->
             <p class="card-text">
-              {{ post.body|truncatewords:30|linebreaks }}
+              {{ post.body|markdown|truncatewords_html:30 }}
             </p>
 
             <!-- Кнопка Читать далее -->
