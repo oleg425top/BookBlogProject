@@ -3,6 +3,7 @@ from django.urls import path
 from blog.apps import BlogConfig
 from blog.views import post_detail, PostListView, post_share, post_comment, posts_list, index_view, post_create, \
     post_delete
+from .feeds import LatestPostsFeed
 
 app_name = BlogConfig.name
 
@@ -16,4 +17,5 @@ urlpatterns = [
     path('blog/<int:post_id>/comment/', post_comment, name='post_comment'),
     path('blog/post/create/', post_create, name='post_create'),
     path('blog/post/delete/<int:post_id>/', post_delete, name='post_delete'),
+    path('blog/feed/', LatestPostsFeed(), name='post_feed')
 ]
