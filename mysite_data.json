@@ -1,0 +1,1378 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-08-14T11:33:41.131Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "test_post",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-08-14T11:42:48.094Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "my second test post",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-08-15T07:11:44.813Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "my second test post",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-08-20T11:51:44.634Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Советы по продуктивности",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-08-20T11:53:00.762Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Советы по продуктивности",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-08-20T11:53:23.433Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Как создать блог на Django",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-08-21T11:21:15.758Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Новости мира IT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-08-21T11:21:41.363Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Обзор новых технологий",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-08-21T11:22:01.582Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Как создать блог на Django",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Тест создания поста",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "18",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "19",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "20",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "21",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "22",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "23",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "24",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-08-27T09:37:32.811Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "25",
+    "object_repr": "Тест создания поста4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-08-27T09:57:10.049Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "26",
+    "object_repr": "Тест создания поста2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043b\\u0430\\u0433\", \"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-09-29T12:26:13.735Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Comment by test on Заметки о Python",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u043a\\u0442\\u0438\\u0432\\u043d\\u043e\\u0441\\u0442\\u044c\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-09-29T13:35:15.730Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Comment by test on Заметки о Python",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u043a\\u0442\\u0438\\u0432\\u043d\\u043e\\u0441\\u0442\\u044c\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-09-30T10:14:06.074Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "31",
+    "object_repr": "MarkDown Post",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-09-30T10:15:06.005Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "31",
+    "object_repr": "MarkDown Post",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-09-30T10:49:32.193Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "localhost:8000",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add post",
+    "content_type": 7,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change post",
+    "content_type": 7,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete post",
+    "content_type": 7,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view post",
+    "content_type": 7,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 8,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 8,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 8,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 8,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add tag",
+    "content_type": 9,
+    "codename": "add_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change tag",
+    "content_type": 9,
+    "codename": "change_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete tag",
+    "content_type": 9,
+    "codename": "delete_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view tag",
+    "content_type": 9,
+    "codename": "view_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add tagged item",
+    "content_type": 10,
+    "codename": "add_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change tagged item",
+    "content_type": 10,
+    "codename": "change_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete tagged item",
+    "content_type": 10,
+    "codename": "delete_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view tagged item",
+    "content_type": 10,
+    "codename": "view_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 11,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 11,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 11,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 11,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ZOB2jTaDfnOgojb4HaM0Rg$URgsLKZSOhg7bJ9bRzAPFE80CqyvxfzNrThZtbjLUgw=",
+    "last_login": "2025-09-29T11:35:23.028Z",
+    "is_superuser": true,
+    "username": "adminblog",
+    "first_name": "",
+    "last_name": "",
+    "email": "adminblog@mail.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-08-14T11:18:58.610Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "blog",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "blog",
+    "model": "comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "taggit",
+    "model": "tag"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "taggit",
+    "model": "taggeditem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m2srslkasim55bxd9regdipeb6iz73ch",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGllZ_2JT0nMGa9de4wBypDipEHeHSCmgfTPzXiLitta4dV7ilMVZgDj9boTpwW0H-Y7tNss0t3WZSO6KPGiX1znz83K4fwcVe_3WljXohCqE4u2o1JDQQ_HaW6UTqzEXsta5kJ0zYMmAIR6Ko0SeGHQW7w_J1jem:1v3CA7:YGcnkASTAiBgwa9wN5HIKJ7ho3CeZJ233hFu3aTlwU8",
+    "expire_date": "2025-10-13T11:35:23.043Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pz294fi8swze60pq4xvpq6c3ncebfk5y",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGllZ_2JT0nMGa9de4wBypDipEHeHSCmgfTPzXiLitta4dV7ilMVZgDj9boTpwW0H-Y7tNss0t3WZSO6KPGiX1znz83K4fwcVe_3WljXohCqE4u2o1JDQQ_HaW6UTqzEXsta5kJ0zYMmAIR6Ko0SeGHQW7w_J1jem:1umW0T:addiCvuRq7HQOi_xZHGjUJs9H1ycWhwGXp1mzq8jMck",
+    "expire_date": "2025-08-28T11:20:29.419Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y9jov84njh3dvjlz72wj91rq0zccowo5",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGllZ_2JT0nMGa9de4wBypDipEHeHSCmgfTPzXiLitta4dV7ilMVZgDj9boTpwW0H-Y7tNss0t3WZSO6KPGiX1znz83K4fwcVe_3WljXohCqE4u2o1JDQQ_HaW6UTqzEXsta5kJ0zYMmAIR6Ko0SeGHQW7w_J1jem:1uqVwO:U0hYigvcHDWMzjeEDhTGfNCva6f0g330uQ_H1LHr7XM",
+    "expire_date": "2025-09-08T12:04:48.373Z"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "my second test post",
+    "slug": "my-second-test-post",
+    "body": "dsdfgsdfsdfasfa.asasdasdsdasda. Asdfsasdasdasdasd. Ssdfffsdfasdsadasd",
+    "publish": "2025-08-14T11:42:05Z",
+    "created": "2025-08-14T11:42:48.088Z",
+    "updated": "2025-08-15T07:11:44.805Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "New title",
+    "slug": "another-post",
+    "body": "Post body.",
+    "publish": "2025-08-14T12:24:32.149Z",
+    "created": "2025-08-14T12:24:47.404Z",
+    "updated": "2025-08-14T12:30:51.224Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "Первый пост",
+    "slug": "pervyy-post",
+    "body": "Это содержимое первого поста. Здесь может быть любой текст, например, приветствие или описание блога.",
+    "publish": "2025-08-10T10:00:00Z",
+    "created": "2025-08-01T08:00:00Z",
+    "updated": "2025-08-05T09:00:00Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "title": "Черновик поста",
+    "slug": "chernovik-posta",
+    "body": "Это черновик. Тут может быть неоконченная мысль или набросок идеи.",
+    "publish": "2025-08-15T12:00:00Z",
+    "created": "2025-08-02T11:00:00Z",
+    "updated": "2025-08-06T10:00:00Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "title": "Как создать блог на Django",
+    "slug": "kak-sozdat-blog-na-django",
+    "body": "Пошаговая инструкция по созданию блога с использованием Django и Python.",
+    "publish": "2025-08-12T14:00:00Z",
+    "created": "2025-08-03T09:30:00Z",
+    "updated": "2025-08-21T11:22:01.554Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 8,
+  "fields": {
+    "title": "Новости мира IT",
+    "slug": "novosti-mira-it",
+    "body": "Последние новости из мира информационных технологий и программирования.",
+    "publish": "2025-08-14T16:00:00Z",
+    "created": "2025-08-04T10:15:00Z",
+    "updated": "2025-08-21T11:21:15.717Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 9,
+  "fields": {
+    "title": "Обзор новых технологий",
+    "slug": "obzor-novykh-tekhnologiy",
+    "body": "В этом посте рассмотрены последние тренды в области веб-разработки и искусственного интеллекта.",
+    "publish": "2025-08-16T08:00:00Z",
+    "created": "2025-08-05T13:45:00Z",
+    "updated": "2025-08-21T11:21:41.344Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 10,
+  "fields": {
+    "title": "Советы по продуктивности",
+    "slug": "sovety-po-produktivnosti",
+    "body": "Полезные советы, как оставаться продуктивным и управлять своим временем эффективно.",
+    "publish": "2025-08-17T18:00:00Z",
+    "created": "2025-08-06T16:30:00Z",
+    "updated": "2025-08-20T11:53:00.753Z",
+    "status": "DF",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 11,
+  "fields": {
+    "title": "Заметки о Python",
+    "slug": "zametki-o-python",
+    "body": "Краткие заметки и примеры кода на языке Python для начинающих разработчиков.",
+    "publish": "2025-08-18T20:00:00Z",
+    "created": "2025-08-07T18:00:00Z",
+    "updated": "2025-08-11T19:00:00Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 26,
+  "fields": {
+    "title": "Тест создания поста2",
+    "slug": "test-sozdaniya-posta-2",
+    "body": "Создание вдохновляющих постов может быть сложной задачей, особенно для новичков. Важно не только подобрать правильные слова, но и создать эмоциональную связь с аудиторией. В этой статье мы рассмотрим примеры готовых текстов для вдохновляющих постов, дадим советы по их созданию и укажем на ошибки, которых следует избегать. Вдохновляющие посты могут стать мощным инструментом для мотивации и поддержки вашей аудитории, помогая им преодолевать трудности и достигать своих целей.",
+    "publish": "2025-08-27T09:48:02Z",
+    "created": "2025-08-27T09:48:02.970Z",
+    "updated": "2025-08-27T09:57:10.020Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 27,
+  "fields": {
+    "title": "Тест создания поста3",
+    "slug": "3",
+    "body": "\"Каждый день — это новая возможность. Не важно, что было вчера, сегодня у тебя есть шанс начать заново и стать лучше. Верь в себя и свои силы. Ты способен на большее, чем думаешь! 💪 Каждый новый день приносит с собой новые возможности и вызовы. Не позволяй прошлым ошибкам и неудачам определять твое будущее. Верь в свои способности и стремись к самосовершенствованию. Каждый шаг, который ты делаешь сегодня, приближает тебя к твоим мечтам и целям.\"",
+    "publish": "2025-08-27T09:58:03.057Z",
+    "created": "2025-08-27T09:58:03.066Z",
+    "updated": "2025-08-27T09:58:03.067Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 28,
+  "fields": {
+    "title": "Test post 99",
+    "slug": "test-post-99",
+    "body": "\"Каждый день — это новая возможность. Не важно, что было вчера, сегодня у тебя есть шанс начать заново и стать лучше. Верь в себя и свои силы. Ты способен на большее, чем думаешь! 💪 Каждый новый день приносит с собой новые возможности и вызовы. Не позволяй прошлым ошибкам и неудачам определять твое будущее. Верь в свои способности и стремись к самосовершенствованию. Каждый шаг, который ты делаешь сегодня, приближает тебя к твоим мечтам и целям.\"",
+    "publish": "2025-08-27T09:59:04.663Z",
+    "created": "2025-08-27T09:59:04.676Z",
+    "updated": "2025-08-27T09:59:04.676Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 29,
+  "fields": {
+    "title": "Поддержка и дружба",
+    "slug": "podderzhka-i-druzhba",
+    "body": "\"Настоящие друзья — это те, кто поддерживает тебя в трудные моменты и радуется твоим успехам. Цени их и будь благодарен за каждую минуту, проведенную вместе. Дружба — это бесценный дар. 🤝 Друзья — это те люди, которые всегда рядом, независимо от обстоятельств. Они поддерживают тебя в трудные моменты и радуются твоим успехам. Цени их и будь благодарен за каждую минуту, проведенную вместе. Настоящая дружба — это взаимная поддержка и понимание, которые делают нашу жизнь ярче и богаче.\"",
+    "publish": "2025-08-27T10:04:50.590Z",
+    "created": "2025-08-27T10:04:50.799Z",
+    "updated": "2025-08-27T10:04:50.799Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 30,
+  "fields": {
+    "title": "ghfghgfghfgh",
+    "slug": "ghfghgfghfgh",
+    "body": "fghfghfgdhfhfghdfghd",
+    "publish": "2025-09-29T11:36:00.714Z",
+    "created": "2025-09-29T11:36:00.856Z",
+    "updated": "2025-09-29T11:36:00.856Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 31,
+  "fields": {
+    "title": "MarkDown Post",
+    "slug": "markdown-post",
+    "body": "This is a post formatted with markdown\r\n-------------------------------------\r\n\r\n*This is emphasized* and **this is more emphasized**.\r\n\r\n Here is a list:\r\n\r\n * One\r\n * Two\r\n * Three\r\n\r\n And a [link to the Django website](https://www.djangoproject.com/).",
+    "publish": "2025-09-30T10:12:48Z",
+    "created": "2025-09-30T10:14:06.052Z",
+    "updated": "2025-09-30T10:15:05.979Z",
+    "status": "PB",
+    "author": 1
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "post": 11,
+    "name": "test",
+    "email": "oleg59152@gmail.com",
+    "body": "testtesttest",
+    "created": "2025-08-19T09:05:00.468Z",
+    "updated": "2025-09-29T13:35:15.727Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 2,
+  "fields": {
+    "post": 11,
+    "name": "test2",
+    "email": "oleg59152@gmail.com",
+    "body": "test test test test test test test test test test test test test test test test test test test test test",
+    "created": "2025-08-19T09:05:52.964Z",
+    "updated": "2025-08-19T09:05:52.964Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 3,
+  "fields": {
+    "post": 9,
+    "name": "test3",
+    "email": "oleg59152@gmail.com",
+    "body": "test test test test test test test test test test test test test test test test test test test test test",
+    "created": "2025-08-23T08:44:36.846Z",
+    "updated": "2025-08-23T08:44:36.846Z",
+    "active": true
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "admin",
+    "slug": "admin"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "frist",
+    "slug": "frist"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "test",
+    "slug": "test"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "IT",
+    "slug": "it"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "technology",
+    "slug": "technology"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 6,
+  "fields": {
+    "name": "blog",
+    "slug": "blog"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 7,
+  "fields": {
+    "name": "create",
+    "slug": "create"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 8,
+  "fields": {
+    "name": "cre",
+    "slug": "cre"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 9,
+  "fields": {
+    "name": "markdown",
+    "slug": "markdown"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 1,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 2,
+  "fields": {
+    "tag": 2,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 3,
+  "fields": {
+    "tag": 3,
+    "content_type": 7,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 4,
+    "content_type": 7,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 7,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 4,
+    "content_type": 7,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 9,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 10,
+  "fields": {
+    "tag": 5,
+    "content_type": 7,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 11,
+  "fields": {
+    "tag": 6,
+    "content_type": 7,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 12,
+  "fields": {
+    "tag": 7,
+    "content_type": 7,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 13,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 26
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 14,
+  "fields": {
+    "tag": 8,
+    "content_type": 7,
+    "object_id": 26
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 15,
+  "fields": {
+    "tag": 1,
+    "content_type": 7,
+    "object_id": 31
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 16,
+  "fields": {
+    "tag": 9,
+    "content_type": 7,
+    "object_id": 31
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "localhost:8000",
+    "name": "localhost:8000"
+  }
+}
+]
