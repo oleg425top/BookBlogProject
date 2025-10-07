@@ -1,0 +1,83 @@
+{% extends "blog/base.html" %}
+{% load blog_tags %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="card-body p-4 p-md-5">
+          {% if query %}
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="fw-bold mb-0">Search Results</h1>
+            <a href="{% url 'blog:post_search' %}" class="btn btn-outline-primary">
+              <i class="bi bi-search me-1"></i> New Search
+            </a>
+          </div>
+          <div class="mb-4">
+            <h4 class="text-muted">
+              Found
+              {% with results.count as total_results %}
+              <span class="text-primary fw-semibold">{{ total_results }}</span>
+              result{{ total_results|pluralize }}
+              {% endwith %}
+              for "<span class="text-primary">{{ query }}</span>"
+            </h4>
+          </div>
+
+          {% for post in results %}
+          <div class="card mb-4 border-0 shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title fw-bold">
+                <a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">
+                  {{ post.title }}
+                </a>
+              </h3>
+              <div class="text-muted mb-3">
+                Posted on {{ post.publish }} by {{ post.author }}
+              </div>
+              <div class="card-text">
+                {{ post.body|markdown|truncatewords_html:30 }}
+              </div>
+              <a href="{{ post.get_absolute_url }}" class="btn btn-sm btn-primary mt-2">
+                Read More <i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+          {% empty %}
+          <div class="alert alert-warning py-4">
+            <h4 class="alert-heading">No results found</h4>
+            <p class="mb-0">
+              There are no posts matching your query "<strong>{{ query }}</strong>".
+            </p>
+          </div>
+          {% endfor %}
+
+          {% else %}
+          <div class="text-center mb-4">
+            <h1 class="fw-bold">Search for Posts</h1>
+            <p class="text-muted">Enter your search query below</p>
+          </div>
+          <form method="get" class="needs-validation" novalidate>
+            <div class="mb-4">
+              <label for="{{ form.query.id_for_label }}" class="form-label fw-semibold">Search Query</label>
+              {{ form.query }}
+              <div class="invalid-feedback">
+                Please enter a search term.
+              </div>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="bi bi-search me-2"></i>Search
+              </button>
+            </div>
+          </form>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

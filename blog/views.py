@@ -1,15 +1,18 @@
+from re import search
+
 from django.db.models import Count
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.views.decorators.http import require_POST
 from django.views.generic import ListView, CreateView
 from django.utils.text import slugify
+from django.contrib.postgres.search import SearchVector
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from taggit.models import Tag
 
-from blog.forms import EmailPostForm, CommentForm, PostForm
+from blog.forms import EmailPostForm, CommentForm, PostForm, SearchForm
 from blog.models import Post
 from blog.services import send_email
 from blog.utils import slug_generator
@@ -153,3 +156,23 @@ def post_delete(request, post_id):
             'title': 'Удалить пост',
         }
     return render(request, 'blog/post/post_delete.html', context=context)
+
+def post_search(request):
+    form = SearchForm()
+    query = None
+    results = []
+
+    if 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            results = Post.published.annotate(
+                search=SearchVector('title', 'body'),
+            ).filter(search=query)
+    context = {
+                'title':'Posts Search',
+                'form':form,
+                'query':query,
+                'results':results
+            }
+    return render(request, 'blog/post/search.html', context=context)
