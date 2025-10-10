@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+    <div class="row">
+        <div class="col-md-3 col-sm-2"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Введите необходимые данные</div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+
+                        <div class="col-6">
+                            <div class="form-group mb-0 form-group-info">
+                                <button class="btn btn-theme" type="submit">Зарегистрироваться</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <small class="text-muted">
+                            Нажимая "Зарегистрироваться", вы принимаете
+                            <a href="{% url 'users:privacy_policy' %}" target="_blank">Политику конфиденциальности</a>.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

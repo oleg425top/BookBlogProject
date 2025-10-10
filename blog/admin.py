@@ -5,6 +5,14 @@ from blog.models import Post, Comment
 
 # admin.site.register(Post)
 
+class PostTabAdmin(admin.TabularInline):
+    """Интерфейс для редактирования корзины в контексте родительской модели."""
+    model = Post
+    fields = "title", "publish", "created"
+    search_fields = "title", "publish", "created"
+    readonly_fields = ("created",)
+    extra = 1
+
 @admin.register(Post)
 class AdminPost(admin.ModelAdmin):
     list_display = ['title', 'slug', 'author', 'publish', 'status']
