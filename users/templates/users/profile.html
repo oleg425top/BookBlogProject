@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load my_tags%}
 
 {% block content %}
 <div class="container mt-5">
@@ -11,18 +12,12 @@
                 </div>
                 <div class="card-body text-center">
                     <!-- Аватар -->
-                    {% if user.image %}
                         <img
-                            src="{{ user.image.url }}"
+                            src="{{ user.image|user_media }}"
                             alt="Аватар"
                             class="rounded-circle mb-3"
                             style="width: 120px; height: 120px; object-fit: cover; border: 3px solid #0d6efd;"
                         >
-                    {% else %}
-                        <div class="mb-3">
-                            <i class="bi bi-person-circle" style="font-size: 120px; color: #0d6efd;"></i>
-                        </div>
-                    {% endif %}
                     <!-- Информация о пользователе -->
                     <div class="text-start mb-4">
                         <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
