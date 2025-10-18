@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Мой блог{% endblock %}</title>
+  <title>{% block title %}{{ title }}{% endblock %}</title>
   <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/x-icon" />
 
   <!-- Bootstrap CSS -->
@@ -31,7 +31,12 @@
           <li class="nav-item"><a class="nav-link active" href="{% url 'blog:index' %}">Главная</a></li>
           <li class="nav-item"><a class="nav-link active" href="{% url 'blog:post_create' %}">Добавить пост</a></li>
           <li class="nav-item"><a class="nav-link active" href="{% url 'blog:post_search' %}">Поиск</a></li>
+          {% if user.is_authenticated %}
+          <li class="nav-item"><a class="nav-link active" href="{% url 'users:profile' %}">{{ user }}</a></li>
+          <li class="nav-item"><a class="nav-link active" href="{% url 'users:logout' %}">Выйти</a></li>
+          {% else %}
           <li class="nav-item"><a class="nav-link active" href="{% url 'users:login' %}">Войти</a></li>
+          {% endif %}
         </ul>
       </div>
     </div>

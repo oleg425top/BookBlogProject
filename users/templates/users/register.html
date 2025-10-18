@@ -11,10 +11,9 @@
                     <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form.as_p }}
-
                         <div class="col-6">
                             <div class="form-group mb-0 form-group-info">
-                                <button class="btn btn-theme" type="submit">Зарегистрироваться</button>
+                                <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
                             </div>
                         </div>
                     </form>
@@ -22,7 +21,7 @@
                     <div class="text-center mt-3">
                         <small class="text-muted">
                             Нажимая "Зарегистрироваться", вы принимаете
-                            <a href="{% url 'users:privacy_policy' %}" target="_blank">Политику конфиденциальности</a>.
+                            <a href="{% url 'users:register' %}" target="_blank">Политику конфиденциальности</a>.
                         </small>
                     </div>
                 </div>

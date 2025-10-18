@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% load blog_tags %}
 {% load custom_filters %}
+
 {% block title %}{{ title }}{% endblock %}
+
 {% block content %}
 <div class="container my-5">
   <div class="row justify-content-center">
     <div class="col-lg-8">
       <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
         <div class="card-body p-4 p-md-5">
+
           {% if query %}
           <div class="d-flex justify-content-between align-items-center mb-4">
             <h1 class="fw-bold mb-0">Результаты поиска</h1>
@@ -15,6 +18,7 @@
               <i class="bi bi-search me-1"></i> Новый поиск
             </a>
           </div>
+
           <div class="mb-4">
             <h4 class="text-muted">
               Найдено:
@@ -25,6 +29,7 @@
               по запросу "<span class="text-primary">{{ query }}</span>"
             </h4>
           </div>
+
           {% for post in results %}
           <div class="card mb-4 border-0 shadow-sm">
             <div class="card-body">
@@ -34,7 +39,7 @@
                 </a>
               </h3>
               <div class="text-muted mb-3">
-                Опубликовано {{post.publish}} автором {{post.author}}
+                Опубликовано {{ post.publish }} автором {{ post.author }}
               </div>
               <div class="card-text">
                 {{ post.body|markdown|truncatewords_html:30 }}
@@ -52,26 +57,33 @@
             </p>
           </div>
           {% endfor %}
+
           {% else %}
+          <!-- Форма поиска -->
           <div class="text-center mb-4">
             <h1 class="fw-bold">Поиск постов</h1>
             <p class="text-muted">Введите ваш поисковый запрос ниже</p>
           </div>
+
           <form method="get" class="needs-validation" novalidate>
             <div class="mb-4">
               <label for="id_query" class="form-label fw-semibold">Поисковый запрос</label>
-              {{form.query}}
+              <!-- ✅ Исправлено: добавлен Bootstrap-класс -->
+              <input type="text" name="query" id="id_query" class="form-control form-control-lg" value="{{ request.GET.query|default:'' }}" required>
               <div class="invalid-feedback">
                 Пожалуйста, введите поисковый запрос.
               </div>
             </div>
-            <div class="d-grid">
-              <button type="submit" class="btn btn-primary btn-lg">
-                <i class="bi bi-search me-2"></i>Искать
+
+            <!-- ✅ Исправлено выравнивание кнопки -->
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg w-100">
+                <i class="bi bi-search me-2"></i> Искать
               </button>
             </div>
           </form>
           {% endif %}
+
         </div>
       </div>
     </div>

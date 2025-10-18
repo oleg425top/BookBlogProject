@@ -1,27 +1,69 @@
 {% extends "base.html" %}
- {% block title %}Share a post{% endblock %}
- {% block content %}
-<div class="container my-4">
+
+{% block title %}Поделиться постом{% endblock %}
+
+{% block content %}
+<div class="container my-5">
   <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card shadow-sm p-4">
+    <div class="col-md-8 col-lg-6">
+      <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+        <!-- Синяя шапка -->
+        <div class="card-header bg-primary text-white text-center py-3">
+          <h4 class="mb-0 fw-bold">Поделиться постом по электронной почте</h4>
+        </div>
+
+        <div class="card-body p-4">
           {% if sent %}
-          <div class="alert alert-success">
-            <h1>E-mail successfully sent</h1>
+          <div class="alert alert-success text-center">
+            <h4 class="alert-heading mb-3">Письмо успешно отправлено!</h4>
             <p>
-            "{{ post.title }}" was successfully sent
-            to {{ form.cleaned_data.to }}.
+              Пост <strong>"{{ post.title }}"</strong> был отправлен на адрес
+              <strong>{{ form.cleaned_data.to }}</strong>.
             </p>
+            <a href="{{ post.get_absolute_url }}" class="btn btn-outline-primary mt-3">
+              Вернуться к посту
+            </a>
           </div>
+
           {% else %}
-            <h1>Share "{{ post.title }}" by e-mail</h1>
-            <form method="post">{{ form.as_p }}
+          <h5 class="fw-semibold mb-4 text-center">
+            Отправить пост <span class="text-primary">"{{ post.title }}"</span> по e-mail
+          </h5>
+
+          <form method="post" class="needs-validation" novalidate>
             {% csrf_token %}
-                <input type="submit" class="button btn btn-primary" value="Send e-mail">
-            </form>
+
+            <!-- Поля формы оформлены вручную для красивого стиля -->
+            <div class="mb-3">
+              <label for="id_name" class="form-label fw-semibold">Ваше имя</label>
+              <input type="text" name="name" id="id_name" class="form-control" value="{{ form.name.value|default_if_none:'' }}" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="id_email" class="form-label fw-semibold">Ваш e-mail</label>
+              <input type="email" name="email" id="id_email" class="form-control" value="{{ form.email.value|default_if_none:'' }}" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="id_to" class="form-label fw-semibold">Кому отправить</label>
+              <input type="email" name="to" id="id_to" class="form-control" value="{{ form.to.value|default_if_none:'' }}" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="id_comments" class="form-label fw-semibold">Комментарий (необязательно)</label>
+              <textarea name="comments" id="id_comments" rows="4" class="form-control">{{ form.comments.value|default_if_none:'' }}</textarea>
+            </div>
+
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="bi bi-send me-2"></i> Отправить письмо
+              </button>
+            </div>
+          </form>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
 </div>
-  {% endif %}
- {% endblock %}
+{% endblock %}
