@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <h1>Посты пользователя {{ user.first_name }}</h1>
+  {% for post in posts %}
+    <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+    <p>{{ post.body|truncatechars:200 }}</p>
+    <p>Опубликовано: {{ post.publish }}</p>
+    <a href="{{ post.get_absolute_url }}" class="btn btn-primary btn-sm">Читать далее</a>
+  {% endfor %}
+{% endblock %}

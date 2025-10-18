@@ -2,7 +2,7 @@ from django.urls import path
 
 from blog.apps import BlogConfig
 from blog.views import post_detail, PostListView, post_share, post_comment, posts_list, index_view, post_create, \
-    post_delete, post_search
+    post_delete, post_search, user_post_list
 from .feeds import LatestPostsFeed
 
 app_name = BlogConfig.name
@@ -19,4 +19,5 @@ urlpatterns = [
     path('blog/post/delete/<int:post_id>/', post_delete, name='post_delete'),
     path('blog/feed/', LatestPostsFeed(), name='post_feed'),
     path('blog/search/', post_search, name='post_search'),
+    path('user/<int:user_id>/posts/', user_post_list, name='user_post_list'),
 ]

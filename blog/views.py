@@ -16,13 +16,14 @@ from blog.forms import EmailPostForm, CommentForm, PostForm, SearchForm
 from blog.models import Post
 from blog.services import send_email
 from blog.utils import slug_generator
+from users.models import User
 
 
 def index_view(request):
     posts = Post.published.all()[:3]
     context = {
-        'title':'Home: главная',
-        'posts':posts,
+        'title': 'Home: главная',
+        'posts': posts,
 
     }
     return render(request, 'blog/post/index.html', context=context)
@@ -44,10 +45,11 @@ def posts_list(request, tag_slug=None):
         posts = paginator.page(paginator.num_pages)
     context = {
         'posts': posts,
-        'tag':tag,
+        'tag': tag,
         'title': 'Опубликованные статьи',
     }
     return render(request, 'blog/post/posts_list.html', context=context)
+
 
 class PostListView(ListView):
     queryset = Post.published.all()
@@ -83,7 +85,7 @@ def post_create(request):
             return HttpResponseRedirect(reverse('blog:posts_list'))
     else:
         form = PostForm()
-        return render(request, 'blog/post/post_create.html', {'title':'Создание поста', 'form': form})
+        return render(request, 'blog/post/post_create.html', {'title': 'Создание поста', 'form': form})
 
 
 def post_detail(request, year, month, day, post):
@@ -93,14 +95,14 @@ def post_detail(request, year, month, day, post):
     form = CommentForm()
     post_tags_ids = post.tags.values_list('id', flat=True)
     similar_posts = Post.published.filter(tags__in=post_tags_ids).exclude(id=post.id)
-    similar_posts = similar_posts.annotate(same_tags=Count('tags')).order_by('-same_tags','-publish')[:4]
+    similar_posts = similar_posts.annotate(same_tags=Count('tags')).order_by('-same_tags', '-publish')[:4]
     context = {
-        'post':post,
-        'comments':comments,
+        'post': post,
+        'comments': comments,
         'title': 'Детали поста',
         'object': post,
-        'form':form,
-        'similar_posts':similar_posts,
+        'form': form,
+        'similar_posts': similar_posts,
     }
     return render(request, 'blog/post/post_detail.html', context=context)
 
@@ -123,11 +125,12 @@ def post_share(request, post_id):
     else:
         form = EmailPostForm()
     context = {
-            'post': post,
-            'form': form,
-            'sent':sent,
-        }
+        'post': post,
+        'form': form,
+        'sent': sent,
+    }
     return render(request, 'blog/post/share.html', context=context)
+
 
 @require_POST
 def post_comment(request, post_id):
@@ -139,10 +142,10 @@ def post_comment(request, post_id):
         comment.post = post
         comment.save()
     context = {
-            'post': post,
-            'form': form,
-            'comment':comment,
-        }
+        'post': post,
+        'form': form,
+        'comment': comment,
+    }
     return render(request, 'blog/post/comment.html', context=context)
 
 
@@ -152,10 +155,11 @@ def post_delete(request, post_id):
         post.delete()
         return redirect('blog:posts_list')
     context = {
-            'post': post,
-            'title': 'Удалить пост',
-        }
+        'post': post,
+        'title': 'Удалить пост',
+    }
     return render(request, 'blog/post/post_delete.html', context=context)
+
 
 def post_search(request):
     form = SearchForm()
@@ -174,9 +178,26 @@ def post_search(request):
                 rank=SearchRank(search_vector, search_query),
             ).filter(rank__gte=0.3).order_by('-rank')
     context = {
-                'title':'Posts Search',
-                'form':form,
-                'query':query,
-                'results':results
-            }
+        'title': 'Posts Search',
+        'form': form,
+        'query': query,
+        'results': results
+    }
     return render(request, 'blog/post/search.html', context=context)
+
+
+def user_post_list(request, user_id):
+    # Получаем пользователя по email
+    user = get_object_or_404(User, id=user_id)
+    # Получаем только опубликованные посты этого пользователя
+    posts = Post.objects.filter(
+        author=user,
+        status=Post.Status.PUBLISHED
+    ).order_by('-publish')
+
+    context = {
+        'user': user,
+        'posts': posts,
+        'title':'Мои посты',
+    }
+    return render(request, 'blog/post/user_post_list.html', context=context)
